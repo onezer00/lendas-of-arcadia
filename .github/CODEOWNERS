@@ -1,0 +1,20 @@
+# Configuração do CODEOWNERS
+# Este arquivo define quem é responsável por revisar alterações em diferentes partes do repositório
+# Formato: caminho/para/arquivo ou diretório @usuário_github ou @equipe
+
+# Configuração padrão para todo o repositório
+* @onezer00
+
+# Workflows do GitHub Actions
+.github/workflows/ @onezer00
+
+# Frontend React
+lendas-of-arcadia/src/ @onezer00
+
+# Configurações
+*.json @onezer00
+*.yml @onezer00
+*.yaml @onezer00
+
+# Documentação
+*.md @onezer00 

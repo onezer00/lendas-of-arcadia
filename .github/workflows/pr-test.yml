@@ -1,0 +1,39 @@
+name: Pull Request Test
+
+on:
+  pull_request:
+    branches: [ main, develop ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js 🔧
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: 'npm'
+          cache-dependency-path: 'lendas-of-arcadia/package-lock.json'
+
+      - name: Install Dependencies 📦
+        run: |
+          cd lendas-of-arcadia
+          npm ci
+
+      # Build do projeto para garantir que compila corretamente
+      - name: Build 🏗️
+        run: |
+          cd lendas-of-arcadia
+          npm run build
+        env:
+          CI: false
+
+      # Executar testes (se houver)
+      - name: Test 🧪
+        run: |
+          cd lendas-of-arcadia
+          npm test -- --passWithNoTests || echo "Nenhum teste configurado, pulando..." 

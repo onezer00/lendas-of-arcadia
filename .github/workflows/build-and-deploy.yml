@@ -1,0 +1,48 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  # Permite execução manual a partir da aba Actions no GitHub
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Verificar o repositório
+      - name: Checkout 🛎️
+        uses: actions/checkout@v3
+
+      # Configurar Node.js
+      - name: Setup Node.js 🔧
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: 'npm'
+          cache-dependency-path: 'lendas-of-arcadia/package-lock.json'
+
+      # Instalar dependências
+      - name: Install Dependencies 📦
+        run: |
+          cd lendas-of-arcadia
+          npm ci
+
+      # Build do projeto
+      - name: Build 🏗️
+        run: |
+          cd lendas-of-arcadia
+          npm run build
+        env:
+          CI: false  # Evita que o build falhe por warnings
+
+      # Deploy para GitHub Pages
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: lendas-of-arcadia/build # Pasta que contém o build da aplicação
+          branch: gh-pages # Ramificação onde será publicado
+          clean: true # Limpa a branch antes de fazer o deploy 

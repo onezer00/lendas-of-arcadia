@@ -1,0 +1,22 @@
+version: 2
+updates:
+  # Configuração para manter as dependências npm atualizadas
+  - package-ecosystem: "npm"
+    directory: "/lendas-of-arcadia"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 10
+    target-branch: "develop"
+    labels:
+      - "dependencies"
+      - "automerge"
+
+  # Configuração para manter as ações do GitHub atualizadas
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+    open-pull-requests-limit: 5
+    labels:
+      - "dependencies"
+      - "actions" 
