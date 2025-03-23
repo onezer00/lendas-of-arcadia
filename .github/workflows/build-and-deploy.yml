@@ -23,7 +23,6 @@ jobs:
         with:
           node-version: '18'
           cache: 'npm'
-          cache-dependency-path: 'lendas-of-arcadia/package-lock.json'
 
       # Instalar dependências
       - name: Install Dependencies 📦
