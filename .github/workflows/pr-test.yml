@@ -20,13 +20,11 @@ jobs:
 
       - name: Install Dependencies 📦
         run: |
-          cd lendas-of-arcadia
           npm ci
 
       # Build do projeto para garantir que compila corretamente
       - name: Build 🏗️
         run: |
-          cd lendas-of-arcadia
           npm run build
         env:
           CI: false
@@ -34,5 +32,4 @@ jobs:
       # Executar testes (se houver)
       - name: Test 🧪
         run: |
-          cd lendas-of-arcadia
           npm test -- --passWithNoTests || echo "Nenhum teste configurado, pulando..." 

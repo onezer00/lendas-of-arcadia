@@ -23,11 +23,9 @@ jobs:
 
       - name: Install Dependencies 📦
         run: |
-          cd lendas-of-arcadia
           npm ci
 
       # Executar o linting (se o projeto tiver script configurado)
       - name: Lint 🧹
         run: |
-          cd lendas-of-arcadia
           npm run lint || echo "Linting não configurado, pulando..." 
