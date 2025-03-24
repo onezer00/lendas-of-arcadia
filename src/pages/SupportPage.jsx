@@ -70,8 +70,18 @@ const SupportPage = () => {
                   rel="noopener noreferrer"
                   className="flex items-center justify-center bg-amber-600 hover:bg-amber-500 text-white py-3 px-6 rounded-lg transition-colors"
                 >
-                  <svg className="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/>
+                  <svg 
+                    className="w-5 h-5 mr-2" 
+                    viewBox="0 0 24 24" 
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="M12 6v12" />
+                    <path d="M15 9h-6l6 6h-6" />
                   </svg>
                   Apoia.se
                 </a>

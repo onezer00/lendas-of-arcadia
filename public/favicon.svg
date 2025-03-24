@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Fundo do escudo -->
+  <path d="M32 4 L58 16 L58 36 C58 48 47 56 32 60 C17 56 6 48 6 36 L6 16 Z" 
+        fill="#2d3748" stroke="#eab308" stroke-width="2"/>
+  
+  <!-- Borda interna decorativa do escudo -->
+  <path d="M32 8 L54 18 L54 34 C54 44 44 51 32 55 C20 51 10 44 10 34 L10 18 Z" 
+        fill="none" stroke="#b44c43" stroke-width="1.5" opacity="0.7"/>
+  
+  <!-- Divisão em quatro do escudo (estilo medieval) -->
+  <path d="M32 8 L32 55 M10 34 L54 34" 
+        stroke="#b44c43" stroke-width="1" opacity="0.5"/>
+  
+  <!-- Letra A estilizada -->
+  <path d="M32 18 L23 48 M32 18 L41 48 M25 40 L39 40" 
+        stroke="#eab308" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  
+  <!-- Efeito de brilho/destaque -->
+  <circle cx="32" cy="18" r="4" fill="#f6e05e" opacity="0.8"/>
+  
+  <!-- Sombra sutil -->
+  <path d="M32 4 L58 16 L58 36 C58 48 47 56 32 60 C17 56 6 48 6 36 L6 16 Z" 
+        fill="black" opacity="0.1" transform="translate(2,2)"/>
+</svg> 
