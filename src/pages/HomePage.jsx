@@ -13,10 +13,10 @@ const HomePage = () => {
         transition={{ duration: 0.8 }}
         className="relative rounded-xl overflow-hidden mb-16 bg-gradient-to-b from-slate-800 to-slate-900"
       >
-        <div className="absolute inset-0 bg-cover bg-center opacity-40" 
+        <div className="absolute inset-0 bg-cover bg-center opacity-40 z-0" 
              style={{ backgroundImage: `url('${IMAGES.hero}')` }} />
         
-        <div className="relative z-10 container mx-auto px-4 py-20 text-center">
+        <div className="relative container mx-auto px-4 py-20 text-center z-[1]">
           <motion.h1 
             initial={{ y: -20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}

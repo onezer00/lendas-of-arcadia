@@ -16,7 +16,7 @@ const Layout = ({ children }) => {
       <EmberEffect />
       
       {/* Header/Navegação */}
-      <header className="bg-slate-950 border-b border-amber-700/30 sticky top-0 z-10 shadow-lg shadow-black/50">
+      <header className="bg-slate-950 border-b border-amber-700/30 sticky top-0 z-50 shadow-lg shadow-black/50">
         <div className="container mx-auto px-4 py-4 flex flex-col sm:flex-row items-center justify-between">
           <Link to="/" className="text-amber-500 font-medieval text-2xl mb-4 sm:mb-0">
             Lendas de Arcadia
