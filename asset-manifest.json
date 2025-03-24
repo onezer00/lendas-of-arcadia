@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/lendas-of-arcadia/static/css/main.ba852b92.css",
-    "main.js": "/lendas-of-arcadia/static/js/main.a979527b.js",
+    "main.css": "/lendas-of-arcadia/static/css/main.f36675ff.css",
+    "main.js": "/lendas-of-arcadia/static/js/main.94e47833.js",
     "static/media/logo.webp": "/lendas-of-arcadia/static/media/logo.be529e6abc3cc85ff89a.webp",
     "static/media/image.jpg": "/lendas-of-arcadia/static/media/image.8bdc14ae83c1c29fdab3.jpg",
     "index.html": "/lendas-of-arcadia/index.html",
-    "main.ba852b92.css.map": "/lendas-of-arcadia/static/css/main.ba852b92.css.map",
-    "main.a979527b.js.map": "/lendas-of-arcadia/static/js/main.a979527b.js.map"
+    "main.f36675ff.css.map": "/lendas-of-arcadia/static/css/main.f36675ff.css.map",
+    "main.94e47833.js.map": "/lendas-of-arcadia/static/js/main.94e47833.js.map"
   },
   "entrypoints": [
-    "static/css/main.ba852b92.css",
-    "static/js/main.a979527b.js"
+    "static/css/main.f36675ff.css",
+    "static/js/main.94e47833.js"
   ]
 }
