@@ -2,7 +2,7 @@
   "name": "lendas-of-arcadia",
   "version": "0.1.0",
   "private": false,
-  "homepage": "https://onezer00.github.io/lendas-of-arcadia",
+  "homepage": "https://onezer00.github.io/lendas-of-arcadia/",
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
