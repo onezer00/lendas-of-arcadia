@@ -30,6 +30,24 @@ jobs:
         run: npm run build
         env:
           CI: false
+      
+      - name: Check if index.html exists 🔍
+        run: |
+          echo "Checking if index.html exists in build directory..."
+          if [ -f "build/index.html" ]; then
+            echo "✅ index.html exists"
+            cat build/index.html | head -15
+          else
+            echo "❌ index.html does not exist!"
+            echo "Contents of build directory:"
+            ls -la build
+          fi
+
+      - name: Create .nojekyll File 📄
+        run: touch build/.nojekyll
+
+      - name: List Build Directory 📋
+        run: ls -la build
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
@@ -37,3 +55,9 @@ jobs:
           folder: build
           branch: gh-pages
           clean: true
+
+      - name: Verify Deployment 🔍
+        run: |
+          echo "Deployment to gh-pages branch completed."
+          echo "If your site is not visible, check GitHub Pages settings in your repository."
+          echo "URL should be: https://onezer00.github.io/lendas-of-arcadia"
